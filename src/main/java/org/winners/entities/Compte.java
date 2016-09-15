@@ -15,6 +15,8 @@ import javax.persistence.OneToOne;
 import org.winners.enumerations.Activity;
 import org.winners.enumerations.Visiblite;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class Compte implements Serializable {
 
@@ -55,6 +57,7 @@ public class Compte implements Serializable {
 		this.created = created;
 	}
 
+	@ApiModelProperty(position = 1, required = true, value = "Compte Id")
 	public Long getIdCompte() {
 		return idCompte;
 	}
@@ -63,6 +66,7 @@ public class Compte implements Serializable {
 		this.idCompte = idCompte;
 	}
 
+	@ApiModelProperty(position = 2, required = true, value = "Compte Email")
 	public String getEmail() {
 		return email;
 	}
@@ -71,6 +75,7 @@ public class Compte implements Serializable {
 		this.email = email;
 	}
 
+	@ApiModelProperty(position = 3, required = true, value = "Compte Password")
 	public String getPassword() {
 		return password;
 	}
@@ -79,6 +84,7 @@ public class Compte implements Serializable {
 		this.password = password;
 	}
 
+	@ApiModelProperty(position = 4, required = true, value = "Compte created dtae")
 	public Date getCreated() {
 		return created;
 	}
@@ -87,6 +93,7 @@ public class Compte implements Serializable {
 		this.created = created;
 	}
 
+	@ApiModelProperty(position = 5, required = true, value = "Compte Visibilite")
 	public Visiblite getVisiblite() {
 		return visiblite;
 	}
@@ -95,6 +102,7 @@ public class Compte implements Serializable {
 		this.visiblite = visiblite;
 	}
 
+	@ApiModelProperty(position = 6, required = true, value = "User")
 	public User getUser() {
 		return user;
 	}
@@ -103,6 +111,7 @@ public class Compte implements Serializable {
 		this.user = user;
 	}
 
+	@ApiModelProperty(position = 7, required = true, value = "Compte Activity")
 	public Activity getActivity() {
 		return activity;
 	}
@@ -111,6 +120,7 @@ public class Compte implements Serializable {
 		this.activity = activity;
 	}
 
+	@ApiModelProperty(position = 8, required = true, value = "Compte Login")
 	public String getLogin() {
 		return login;
 	}

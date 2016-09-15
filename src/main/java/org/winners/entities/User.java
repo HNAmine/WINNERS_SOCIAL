@@ -13,6 +13,8 @@ import javax.persistence.OneToOne;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class User implements Serializable {
 
@@ -52,6 +54,7 @@ public class User implements Serializable {
 		this.sexe = sexe;
 	}
 
+	@ApiModelProperty(position = 1, required = true, value = "User Id")
 	public Long getIdUser() {
 		return idUser;
 	}
@@ -60,6 +63,7 @@ public class User implements Serializable {
 		this.idUser = idUser;
 	}
 
+	@ApiModelProperty(position = 2, required = true, value = "User FirstName")
 	public String getFirstName() {
 		return firstName;
 	}
@@ -68,6 +72,7 @@ public class User implements Serializable {
 		this.firstName = firstName;
 	}
 
+	@ApiModelProperty(position = 3, required = true, value = "User LastName")
 	public String getLastName() {
 		return lastName;
 	}
@@ -76,6 +81,7 @@ public class User implements Serializable {
 		this.lastName = lastName;
 	}
 
+	@ApiModelProperty(position = 4, required = true, value = "User Birth")
 	public Date getBirth() {
 		return birth;
 	}
@@ -84,6 +90,7 @@ public class User implements Serializable {
 		this.birth = birth;
 	}
 
+	@ApiModelProperty(position = 5, required = true, value = "User Sexe")
 	public boolean isSexe() {
 		return sexe;
 	}
@@ -93,6 +100,7 @@ public class User implements Serializable {
 	}
 
 	@JsonIgnore
+	@ApiModelProperty(position = 6, required = true, value = "User Compte")
 	public Compte getCompte() {
 		return compte;
 	}

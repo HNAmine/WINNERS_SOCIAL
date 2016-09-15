@@ -12,12 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 import org.winners.entities.Compte;
 import org.winners.metier.CompteMetier;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
+@Api(value = "Compte Controller", description = "Compte description")
 public class CompteRestService {
 
 	@Autowired
 	private CompteMetier compteMetier;
 
+	@ApiOperation(value = "Save compte")
 	@RequestMapping(value = "/comptes", method = RequestMethod.POST)
 	public Compte saveCompte(@RequestBody Compte compte) {
 		return compteMetier.saveCompte(compte);
@@ -28,6 +33,7 @@ public class CompteRestService {
 		return compteMetier.getCompte(idCompte);
 	}
 
+	@ApiOperation(value = "ALL comptes ;)")
 	@RequestMapping(value = "/comptes", method = RequestMethod.GET)
 	public List<Compte> allComptes() {
 		return compteMetier.allComptes();
